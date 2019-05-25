@@ -50,8 +50,8 @@ class EyeSliderView: UIView {
     @objc func tapOnSlider(gesture: UITapGestureRecognizer) {
         let location = gesture.location(in: self)
         
-        if location.x > circleOffset && location.x < frame.width - circleOffset {
-            let newValue = ((location.x - circleOffset) / (frame.width - 2 * circleOffset))
+        if location.x > 0 && location.x < frame.width  {
+            let newValue = ((location.x ) / (frame.width))
             self.ratio = Float(newValue)
             self.setNeedsDisplay()
             delegate?.eyeSlider(self, didValueChange: self.ratio)
@@ -61,8 +61,8 @@ class EyeSliderView: UIView {
     @objc func dragDrop(gesture: UIPanGestureRecognizer) {
         let location = gesture.location(in: self)
         if gesture.state == .changed || gesture.state == .ended {
-            if location.x > circleOffset && location.x < frame.width - circleOffset {
-                let newValue = ((location.x - circleOffset) / (frame.width - 2 * circleOffset))
+            if location.x > 0 && location.x < frame.width  {
+                let newValue = ((location.x) / (frame.width))
                 self.ratio = Float(newValue)
                 self.setNeedsDisplay()
                 delegate?.eyeSlider(self, didValueChange: self.ratio)
