@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EyeSliderView: UIView {
+@IBDesignable class EyeSliderView: UIView {
     
     open var value: Int {
         return Int((maximumValue - minimumValue) * ratio - minimumValue)
@@ -49,7 +49,6 @@ class EyeSliderView: UIView {
     
     @objc func tapOnSlider(gesture: UITapGestureRecognizer) {
         let location = gesture.location(in: self)
-        
         if location.x > 0 && location.x < frame.width  {
             let newValue = ((location.x ) / (frame.width))
             self.ratio = Float(newValue)

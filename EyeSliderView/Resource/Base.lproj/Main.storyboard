@@ -19,16 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9s4-nw-SM3">
-                                <rect key="frame" x="42" y="408" width="330" height="80"/>
+                                <rect key="frame" x="40.5" y="408" width="333" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I12-Fi-oLw">
-                                        <rect key="frame" x="0.0" y="30" width="28" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="31" width="29.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LbB-fg-pAa" customClass="EyeSliderView" customModule="EyeSliderView" customModuleProvider="target">
-                                        <rect key="frame" x="43" y="0.0" width="240" height="80"/>
+                                        <rect key="frame" x="44.5" y="0.0" width="240" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="4E0-Nf-IBV"/>
@@ -36,26 +36,34 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WD-Xp-fbU">
-                                        <rect key="frame" x="298" y="30" width="32" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="299.5" y="31" width="33.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQp-Yc-lOE">
-                                <rect key="frame" x="178" y="523" width="58.5" height="20"/>
+                                <rect key="frame" x="179.5" y="523" width="55" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="rOw-ix-Afg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eye Slider View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjk-Di-2nE">
+                                <rect key="frame" x="70" y="144" width="274.5" height="49"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yjk-Di-2nE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Em4-2Q-igr"/>
                             <constraint firstItem="9s4-nw-SM3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OmD-OT-CoE"/>
+                            <constraint firstItem="yjk-Di-2nE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="dZg-eC-U5p"/>
                             <constraint firstItem="9s4-nw-SM3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jXr-hp-4ss"/>
                             <constraint firstItem="lQp-Yc-lOE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kJa-Sy-EnU"/>
                             <constraint firstItem="lQp-Yc-lOE" firstAttribute="top" secondItem="9s4-nw-SM3" secondAttribute="bottom" constant="35" id="kZO-n4-XDk"/>
