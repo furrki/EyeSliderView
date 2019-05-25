@@ -24,6 +24,8 @@ class EyeSliderView: UIView {
     @IBInspectable open var circleColor: UIColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.4431372549, alpha: 1)
     open var thumbRadius: CGFloat = 10.0
     
+    var delegate: EyeSliderDelegate?
+    
     var circleCenterX: CGFloat {
         return bounds.size.width * CGFloat(ratio)
     }
@@ -52,6 +54,7 @@ class EyeSliderView: UIView {
             let newValue = ((location.x - circleOffset) / (frame.width - 2 * circleOffset))
             self.ratio = Float(newValue)
             self.setNeedsDisplay()
+            delegate?.eyeSlider(self, didValueChange: self.ratio)
         }
     }
     
@@ -61,8 +64,8 @@ class EyeSliderView: UIView {
             if location.x > circleOffset && location.x < frame.width - circleOffset {
                 let newValue = ((location.x - circleOffset) / (frame.width - 2 * circleOffset))
                 self.ratio = Float(newValue)
-                print(value)
                 self.setNeedsDisplay()
+                delegate?.eyeSlider(self, didValueChange: self.ratio)
             }
         }
     }
@@ -152,4 +155,8 @@ class EyeSliderView: UIView {
             layer.addSublayer(maximumLineShape!)
         }
     }
+}
+
+protocol EyeSliderDelegate {
+    func eyeSlider(_ eyeSliderView: EyeSliderView, didValueChange value: Float)
 }

@@ -10,11 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var currentValueLabel: UILabel!
+    @IBOutlet weak var minValueLabel: UILabel!
+    @IBOutlet weak var maxValueLabel: UILabel!
+    @IBOutlet weak var sliderView: EyeSliderView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        sliderView.delegate = self
+        minValueLabel.text = "\(sliderView.minimumValue)"
+        maxValueLabel.text = "\(sliderView.maximumValue)"
     }
-
-
 }
 
+extension ViewController: EyeSliderDelegate {
+    func eyeSlider(_ eyeSliderView: EyeSliderView, didValueChange value: Float) {
+        currentValueLabel.text = "\(sliderView.value)"
+    }
+}
