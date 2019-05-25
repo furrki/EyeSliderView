@@ -14,6 +14,7 @@
 		FB73BFFD2298C27B008F8B7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB73BFFB2298C27B008F8B7C /* LaunchScreen.storyboard */; };
 		FB73C0082298C27B008F8B7C /* EyeSliderViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB73C0072298C27B008F8B7C /* EyeSliderViewTests.swift */; };
 		FB73C0132298C27B008F8B7C /* EyeSliderViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB73C0122298C27B008F8B7C /* EyeSliderViewUITests.swift */; };
+		FB73C0212298C2CC008F8B7C /* EyeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB73C0202298C2CC008F8B7C /* EyeSliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FB73C00E2298C27B008F8B7C /* EyeSliderViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeSliderViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB73C0122298C27B008F8B7C /* EyeSliderViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeSliderViewUITests.swift; sourceTree = "<group>"; };
 		FB73C0142298C27B008F8B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB73C0202298C2CC008F8B7C /* EyeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeSliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +99,10 @@
 		FB73BFF12298C27B008F8B7C /* EyeSliderView */ = {
 			isa = PBXGroup;
 			children = (
+				FB73C0242298C2ED008F8B7C /* Controller */,
+				FB73C0232298C2DD008F8B7C /* Resource */,
+				FB73C0222298C2D7008F8B7C /* View */,
 				FB73BFF22298C27B008F8B7C /* AppDelegate.swift */,
-				FB73BFF42298C27B008F8B7C /* ViewController.swift */,
-				FB73BFF62298C27B008F8B7C /* Main.storyboard */,
-				FB73BFF92298C27B008F8B7C /* Assets.xcassets */,
-				FB73BFFB2298C27B008F8B7C /* LaunchScreen.storyboard */,
 				FB73BFFE2298C27B008F8B7C /* Info.plist */,
 			);
 			path = EyeSliderView;
@@ -123,6 +124,32 @@
 				FB73C0142298C27B008F8B7C /* Info.plist */,
 			);
 			path = EyeSliderViewUITests;
+			sourceTree = "<group>";
+		};
+		FB73C0222298C2D7008F8B7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB73C0202298C2CC008F8B7C /* EyeSliderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB73C0232298C2DD008F8B7C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FB73BFF92298C27B008F8B7C /* Assets.xcassets */,
+				FB73BFF62298C27B008F8B7C /* Main.storyboard */,
+				FB73BFFB2298C27B008F8B7C /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FB73C0242298C2ED008F8B7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FB73BFF42298C27B008F8B7C /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB73BFF52298C27B008F8B7C /* ViewController.swift in Sources */,
+				FB73C0212298C2CC008F8B7C /* EyeSliderView.swift in Sources */,
 				FB73BFF32298C27B008F8B7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
